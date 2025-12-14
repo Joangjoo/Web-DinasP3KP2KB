@@ -10,7 +10,8 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools({
-      launchEditor : 'Antigravity'
+      launchEditor: 'Antigravity',
+      enabled: false
     }),
     tailwindcss(),
   ],
@@ -19,4 +20,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    host : true,
+    port: 5174
+  }
 })
